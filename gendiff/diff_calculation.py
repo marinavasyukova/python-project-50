@@ -1,4 +1,5 @@
 import json
+import yaml
 
 
 def make_string(key, value):
@@ -7,9 +8,16 @@ def make_string(key, value):
     return (f'{key}: {value}')
 
 
+def open_file(file_path):
+    if file_path.endswith('.json'):
+        return json.load(open(file_path))
+    if file_path.endswith('.yaml') or file_path.endswith('.yml'):
+        return yaml.load(open(file_path), Loader=yaml.Loader)
+
+
 def generate_diff(first_path, second_path):
-    first_file = json.load(open(first_path))
-    second_file = json.load(open(second_path))
+    first_file = open_file(first_path)
+    second_file = open_file(second_path)
     result = '{\n'
     keys_1 = set(first_file.keys())
     keys_2 = set(second_file.keys())
