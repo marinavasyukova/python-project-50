@@ -6,16 +6,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        # we want to test our package on several versions of Python
-        python-version: [3.10]
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Python ${{ matrix.python-version }}
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: 3.10
         # make depends on poetry
       - name: Install dependencies
         run: |
@@ -27,8 +23,8 @@ jobs:
       - name: Run tests
           make test
       - name: Publish code coverage
-        uses: paambaati/codeclimate-action@v3.0.0
+        uses: paambaati/codeclimate-action@v3.2.0
         env:
         CC_TEST_REPORTER_ID: 09153116574570baf75abc84d4968f69ebb0e137fa8880391cba502f6d31c4ed
         with:
-        coverageCommand: poetry run pytest --cov --cov-report xml
+        coverageCommand: poetry run pytest --cov=gendiff --cov-report xml
