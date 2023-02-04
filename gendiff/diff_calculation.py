@@ -23,7 +23,8 @@ def generate_diff(first_path, second_path):
             if first_file[k] == second_file[k]:
                 result += f'  {make_string(k, first_file[k])}\n'
             else:
-                result += f'- {make_string(k, first_file[k])}\n+ {make_string(k,second_file[k])}\n'
+                result += f'- {make_string(k, first_file[k])}\n'
+                result += f'+ {make_string(k,second_file[k])}\n'
     result += '}'
     return result
 
