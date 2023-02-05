@@ -3,3 +3,6 @@
 
 Example of 2 plain .json files comparison
 [![asciicast](https://asciinema.org/a/Cy9uLmqjrE5rM03Qc2Ygk41Wi.svg)](https://asciinema.org/a/Cy9uLmqjrE5rM03Qc2Ygk41Wi)
+
+Example of 2 plain .yaml files comparison
+[![asciicast](https://asciinema.org/a/AqCDguTgp1OxjR1L77ysIsWak.svg)](https://asciinema.org/a/AqCDguTgp1OxjR1L77ysIsWak)
