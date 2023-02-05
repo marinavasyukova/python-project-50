@@ -6,6 +6,8 @@ def test_generate_diff():
     second_json = 'tests/fixtures/file2.json'
     first_yaml = 'tests/fixtures/file1.yaml'
     second_yaml = 'tests/fixtures/file2.yaml'
-    result = open('tests/fixtures/result_json', 'r') 
-    assert generate_diff(first_json, second_json) == result.read()
-    assert generate_diff(first_yaml, second_yaml) == result.read()
+    f = open('tests/fixtures/result_json', 'r')
+    result = f.read()
+    f.close()
+    assert generate_diff(first_json, second_json) == result
+    assert generate_diff(first_yaml, second_yaml) == result
