@@ -6,3 +6,6 @@ Example of 2 plain .json files comparison
 
 Example of 2 plain .yaml files comparison
 [![asciicast](https://asciinema.org/a/AqCDguTgp1OxjR1L77ysIsWak.svg)](https://asciinema.org/a/AqCDguTgp1OxjR1L77ysIsWak)
+
+Example of 2 nested .json and .yaml files comparison
+[![asciicast](https://asciinema.org/a/YrWLFAivqtkD5IuWA0VMnG5Km.svg)](https://asciinema.org/a/YrWLFAivqtkD5IuWA0VMnG5Km)
