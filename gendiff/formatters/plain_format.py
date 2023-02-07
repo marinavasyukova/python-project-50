@@ -37,4 +37,6 @@ def plain(diff, name=''):
             if get_status(node, True) != 'equal':
                 result += make_str(name + get_name(node),
                                    get_value(node), get_status(node, True))
+    if name == '':
+        result = result[:-1]
     return result
