@@ -53,3 +53,21 @@ def test_generate_diff_nested_format_plain_yaml():
     result = f.read()
     f.close()
     assert generate_diff(first_yaml, second_yaml, 'plain') == result
+
+
+def test_generate_diff_nested_format_json_json():
+    first_json = 'tests/fixtures/file1_nested.json'
+    second_json = 'tests/fixtures/file2_nested.json'
+    f = open('tests/fixtures/result_json', 'r')
+    result = f.read()
+    f.close()
+    assert generate_diff(first_json, second_json, 'json') == result
+
+
+def test_generate_diff_nested_format_json_yaml():
+    first_yaml = 'tests/fixtures/file1_nested.yaml'
+    second_yaml = 'tests/fixtures/file2_nested.yaml'
+    f = open('tests/fixtures/result_json', 'r')
+    result = f.read()
+    f.close()
+    assert generate_diff(first_yaml, second_yaml, 'json') == result
