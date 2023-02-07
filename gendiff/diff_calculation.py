@@ -40,6 +40,8 @@ def gen_diff(first_file, second_file):
 def generate_diff(first_path, second_path, format_name='stylish'):
     first_file = open_file(first_path)
     second_file = open_file(second_path)
+    if format_name == 'json':
+        return json.dumps(gen_diff(first_file, second_file), indent=4)
     if format_name == 'plain':
         return plain(gen_diff(first_file, second_file))
     return stylish(gen_diff(first_file, second_file))
