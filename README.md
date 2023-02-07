@@ -10,5 +10,8 @@ Example of 2 plain .yaml files comparison
 Example of 2 nested .json and .yaml files comparison
 [![asciicast](https://asciinema.org/a/YrWLFAivqtkD5IuWA0VMnG5Km.svg)](https://asciinema.org/a/YrWLFAivqtkD5IuWA0VMnG5Km)
 
-Example of 2 nested .json and .yaml files comparison in 2 different formats
+Example of 2 nested .json and .yaml files comparison in 2 different formats (nested and plain)
 [![asciicast](https://asciinema.org/a/UtOyI1DLF6mM6M9z4ealUw10e.svg)](https://asciinema.org/a/UtOyI1DLF6mM6M9z4ealUw10e)
+
+Example of 2 nested .json and .yaml files comparison in json format
+[![asciicast](https://asciinema.org/a/KVkG7T5YNyolZkOkoPGCcASj3.svg)](https://asciinema.org/a/KVkG7T5YNyolZkOkoPGCcASj3)
