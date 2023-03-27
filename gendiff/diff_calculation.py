@@ -6,10 +6,11 @@ from gendiff.formatters.plain_format import plain
 
 
 def open_file(file_path):
-    if file_path.endswith('.json'):
-        return json.load(open(file_path))
-    if file_path.endswith('.yaml') or file_path.endswith('.yml'):
-        return yaml.load(open(file_path), Loader=yaml.Loader)
+    with open(file_path) as file:
+        if file_path.endswith('.json'):
+            return json.load(file)
+        if file_path.endswith('.yaml') or file_path.endswith('.yml'):
+            return yaml.load(file, Loader=yaml.Loader)
 
 
 def gen_diff(first_file, second_file):
