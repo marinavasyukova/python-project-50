@@ -8,6 +8,7 @@ publish:
 	poetry publish --dry-run
 
 package-install:
+	python3 -m pip uninstall hexlet-code -y
 	python3 -m pip install --user dist/*.whl
 
 uninstall:
@@ -21,3 +22,5 @@ test:
 
 test-coverage:
 	poetry run pytest --cov-report term-missing --cov=gendiff
+
+setup: install build package-install
